@@ -1,0 +1,38 @@
+# Node.js files
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Production build output
+dist/
+
+# Dependency directories
+/.yarn
+/.pnp
+.pnp.js
+
+# Optional npm cache directory
+.npm
+
+# MacOS files
+.DS_Store
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+
+# Environment variables file
+.env*
+
+# Logs
+logs/
+*.log
+
+# Build files
+build/
+out/
+
+# Cache directories
+.cache/
+yarn-cache/

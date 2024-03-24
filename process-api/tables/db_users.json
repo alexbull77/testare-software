@@ -1,0 +1,30 @@
+{
+    "users": [
+        {
+            "username": "UTM",
+            "password": "alex",
+            "userId": "1f4228bd-4a53-4b80-8c92-534d93fe6bfe",
+            "role": "organization"
+        },
+        {
+            "username": "alex1",
+            "password": "alex",
+            "userId": "c56d83c5-8c3f-4c49-94e4-15d9944b0183",
+            "role": "regular_user",
+            "selected_organization": "1f4228bd-4a53-4b80-8c92-534d93fe6bfe"
+        },
+        {
+            "username": "alex2",
+            "password": "alex2",
+            "userId": "45142769-0641-403d-8a52-759a9e744036",
+            "role": "regular_user",
+            "selected_organization": "1f4228bd-4a53-4b80-8c92-534d93fe6bfe"
+        },
+        {
+            "username": "USM",
+            "password": "USM",
+            "userId": "dba13334-3cc3-4ef3-8b93-7ac2b14916a8",
+            "role": "organization"
+        }
+    ]
+}

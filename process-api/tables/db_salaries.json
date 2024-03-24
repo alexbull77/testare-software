@@ -1,0 +1,1 @@
+{"schema":{"table_name":"salaries","ownerId":"1f4228bd-4a53-4b80-8c92-534d93fe6bfe","columns":[{"name":"id","type":"id"},{"name":"currency","type":"string"},{"name":"amount","type":"number"},{"name":"delay (days)","type":"number"},{"name":"employee_id","type":"string"}]},"data":[{"id":1,"currency":"MDL","amount":"13230","delay (days)":"12","employee_id":"alex_1"}]}

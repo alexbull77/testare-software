@@ -1,0 +1,20 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore built files
+dist/
+build/
+out/
+
+# Ignore environment variables file
+.env
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore log files
+*.log
+
+# Ignore Nest.js specific files
+.nest/

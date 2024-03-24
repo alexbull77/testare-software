@@ -1,0 +1,1 @@
+{"schema":{"table_name":"james_table","ownerId":"775d04bb-0baf-43a6-a881-5287abdff94c","columns":[{"name":"id","type":"id"},{"name":"username","type":"string"},{"name":"orderNumber","type":"number"}]},"data":[{"id":1,"username":"entry from matt","orderNumber":"43"}]}

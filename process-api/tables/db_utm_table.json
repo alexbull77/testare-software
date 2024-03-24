@@ -1,0 +1,37 @@
+{
+    "schema": {
+        "table_name": "utm_table",
+        "ownerId": "1f4228bd-4a53-4b80-8c92-534d93fe6bfe",
+        "columns": [
+            {
+                "name": "id",
+                "type": "id"
+            },
+            {
+                "name": "faculty",
+                "type": "string"
+            },
+            {
+                "name": "decan",
+                "type": "string"
+            }
+        ]
+    },
+    "data": [
+        {
+            "id": 1,
+            "faculty": "FCIM",
+            "decan": "..."
+        },
+        {
+            "id": 2,
+            "faculty": "FIMID",
+            "decan": "..."
+        },
+        {
+            "id": 3,
+            "faculty": "CEP",
+            "decan": "..."
+        }
+    ]
+}
