@@ -41,8 +41,10 @@ export const Overview = observer(() => {
       <div className="h-screen w-screen bg-slate-100">
         <div className="absolute h-16 bg-white shadow-md flex gap-x-3 p-4 w-full justify-end items-center top-0">
           {role === "organization" && (
-            <NavLink to="/table-editor" data-test="create-new-table-link">
-              <Button variant="link">Create new table</Button>
+            <NavLink to="/table-editor">
+              <Button variant="link" data-test="create-new-table-button">
+                Create new table
+              </Button>
             </NavLink>
           )}
           <Button
@@ -81,8 +83,11 @@ export const Overview = observer(() => {
                   >
                     Edit
                   </Button>
-                  <NavLink to={`/${table_name}`} data-test="see-entries-button">
-                    <Button onClick={() => setSelectedTableByName(table_name)}>
+                  <NavLink to={`/${table_name}`}>
+                    <Button
+                      onClick={() => setSelectedTableByName(table_name)}
+                      data-test="see-entries-button"
+                    >
                       See entries
                     </Button>
                   </NavLink>

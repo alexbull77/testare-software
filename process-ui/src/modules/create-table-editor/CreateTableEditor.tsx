@@ -87,7 +87,7 @@ export const CreateTableEditor = observer(() => {
               <Button
                 className="w-full pt-4"
                 onClick={addColumn}
-                data-test="add-new-column-button"
+                data-test="add-new-column-button-when-there-are-no-columns"
               >
                 Add new column
               </Button>
@@ -100,7 +100,7 @@ export const CreateTableEditor = observer(() => {
                 <div className="w-full flex flex-col gap-y-1">
                   <div>Enter a column's name:</div>
                   <Input
-                    data-test={`column-name-${column.id}`}
+                    data-test={`column-name-input-${column.id}`}
                     value={column.name}
                     onChange={(e) =>
                       column.onChangeField("name", e.target.value)
@@ -110,18 +110,25 @@ export const CreateTableEditor = observer(() => {
                 <div className="w-full flex flex-col gap-y-1">
                   <div>Enter a column's type of data:</div>
                   <Select
-                    data-test={`column-data-type-${column.id}`}
+                    data-test={`column-data-type-input-${column.id}`}
                     onValueChange={(value) => {
                       column.onChangeField("type", value);
                     }}
                     value={column.type}
                   >
                     <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Select a type" />
+                      <SelectValue
+                        data-type={`column-data-type-select-value-${column.id}`}
+                        placeholder="Select a type"
+                      />
                     </SelectTrigger>
                     <SelectContent>
                       {columnTypes.map((type) => (
-                        <SelectItem key={type} value={type}>
+                        <SelectItem
+                          key={type}
+                          value={type}
+                          data-type={`column-data-type-select-item-${column.id}`}
+                        >
                           {type}
                         </SelectItem>
                       ))}
@@ -149,7 +156,9 @@ export const CreateTableEditor = observer(() => {
             ))}
           </div>
           <div className="w-full flex flex-row items-center pt-4 justify-end"></div>
-          <Button onClick={onSave}>Save</Button>
+          <Button onClick={onSave} data-test="save-table-button">
+            Save
+          </Button>
         </div>
       </div>
     </div>

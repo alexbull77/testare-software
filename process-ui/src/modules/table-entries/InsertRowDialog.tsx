@@ -75,7 +75,9 @@ export const InsertRowDialog = observer(() => {
       <div className="w-full flex justify-center p-y-4">
         <DialogTrigger className="w-fit">
           <div className="w-fit">
-            <Button size="lg">Insert new row</Button>
+            <Button size="lg" data-test="insert-new-row-button">
+              Insert new row
+            </Button>
           </div>
         </DialogTrigger>
       </div>
@@ -102,6 +104,7 @@ export const InsertRowDialog = observer(() => {
                         ? "datetime-local"
                         : "number"
                     }
+                    data-test={`${name}-${type}-input`}
                   />
                 </div>
               );
@@ -111,6 +114,7 @@ export const InsertRowDialog = observer(() => {
 
         <div className="w-full flex justify-end">
           <Button
+            data-test="save-new-row-button"
             onClick={() =>
               selectedTable.insertNewEntry(getPreparedData()).then((res) => {
                 if (res) {

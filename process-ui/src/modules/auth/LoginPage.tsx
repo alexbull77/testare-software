@@ -46,16 +46,18 @@ export const LoginPage = observer(() => {
               navigate("/");
             })
           }
+          data-test="login-button"
         >
           Login
         </Button>
         <NavLink
           to="/register"
-          data-test="register-link"
           onClick={reset}
           className="w-full flex justify-center"
         >
-          <Button variant="link">Register</Button>
+          <Button variant="link" data-test="register-button">
+            Register
+          </Button>
         </NavLink>
       </div>
     </div>

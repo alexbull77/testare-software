@@ -78,7 +78,11 @@ export const RegisterPage = observer(() => {
             </SelectTrigger>
             <SelectContent>
               {roles.map((role) => (
-                <SelectItem key={role} value={role}>
+                <SelectItem
+                  data-test={role + "-select-item"}
+                  key={role}
+                  value={role}
+                >
                   {role}
                 </SelectItem>
               ))}
@@ -103,7 +107,11 @@ export const RegisterPage = observer(() => {
               </SelectTrigger>
               <SelectContent>
                 {organizations.map(({ username, userId }) => (
-                  <SelectItem key={userId} value={userId}>
+                  <SelectItem
+                    data-test={username + "-organization-select-item"}
+                    key={userId}
+                    value={userId}
+                  >
                     {username}
                   </SelectItem>
                 ))}
@@ -127,6 +135,7 @@ export const RegisterPage = observer(() => {
                 });
               })
             }
+            data-test="register-button"
           >
             Register
           </Button>
@@ -135,7 +144,9 @@ export const RegisterPage = observer(() => {
             onClick={reset}
             className="w-full flex justify-center"
           >
-            <Button variant="link">Login</Button>
+            <Button data-test="login-button" variant="link">
+              Login
+            </Button>
           </NavLink>
         </div>
       </div>
