@@ -1,14 +1,14 @@
 {
     "users": [
         {
-            "username": "UTM",
-            "password": "alex",
+            "username": "utm",
+            "password": "utm",
             "userId": "1f4228bd-4a53-4b80-8c92-534d93fe6bfe",
             "role": "organization"
         },
         {
             "username": "alex1",
-            "password": "alex",
+            "password": "alex1",
             "userId": "c56d83c5-8c3f-4c49-94e4-15d9944b0183",
             "role": "regular_user",
             "selected_organization": "1f4228bd-4a53-4b80-8c92-534d93fe6bfe"
@@ -21,10 +21,24 @@
             "selected_organization": "1f4228bd-4a53-4b80-8c92-534d93fe6bfe"
         },
         {
-            "username": "USM",
-            "password": "USM",
+            "username": "usm",
+            "password": "usm",
             "userId": "dba13334-3cc3-4ef3-8b93-7ac2b14916a8",
             "role": "organization"
+        },
+        {
+            "username": "john1",
+            "password": "john1",
+            "userId": "2902658c-f8d6-46a7-ba00-72147d926566",
+            "role": "regular_user",
+            "selected_organization": "dba13334-3cc3-4ef3-8b93-7ac2b14916a8"
+        },
+        {
+            "username": "john2",
+            "password": "john2",
+            "userId": "b1781808-c401-415e-bad0-36fbeb706356",
+            "role": "regular_user",
+            "selected_organization": "dba13334-3cc3-4ef3-8b93-7ac2b14916a8"
         }
     ]
 }
