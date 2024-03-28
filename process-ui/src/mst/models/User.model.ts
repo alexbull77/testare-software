@@ -26,26 +26,27 @@ export const User = types
     },
 
     register: flow(function* () {
-      const res = yield* toGenerator(
-        axios({
-          method: "post",
-          url: "http://localhost:3000/auth/register",
-          headers: {},
-          data: {
-            username: self.username,
-            password: self.password,
-            role: self.role,
-            selected_organization: self.selected_organization,
-          },
-        })
-      );
+      try {
+        const res = yield* toGenerator(
+          axios({
+            method: "post",
+            url: "http://localhost:3000/auth/register",
+            headers: {},
+            data: {
+              username: self.username,
+              password: self.password,
+              role: self.role,
+              selected_organization: self.selected_organization,
+            },
+          })
+        );
 
-      if (res.data.response?.error) {
-        toast.error(res.data.response.error);
+        return res.data;
+      } catch (e: any) {
+        toast.error(e.response.data.message);
+        console.error(e);
         return;
       }
-
-      return res.data;
     }),
 
     login: flow(function* () {

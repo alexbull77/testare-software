@@ -14,10 +14,6 @@ const usersPath = './tables/db_users.json';
 @Injectable()
 export class UsersService {
   async findOne(username: string): Promise<User | undefined> {
-    if (!fs.existsSync(usersPath)) {
-      throw new InternalServerErrorException(`No users table exists.`);
-    }
-
     try {
       const buffer = fs.readFileSync(usersPath, 'utf-8');
       const obj = JSON.parse(buffer);
