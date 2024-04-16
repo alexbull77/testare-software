@@ -5,6 +5,7 @@ import {
 } from '@nestjs/common';
 import * as fs from 'fs';
 
+import { uniqBy } from 'lodash';
 const DIRECTORY_PATH = './tables';
 
 @Injectable()
@@ -22,6 +23,11 @@ export class DynamicTablesService {
       );
     }
 
+    if (uniqBy(columns, 'name').length !== columns.length) {
+      throw new InternalServerErrorException(
+        `Cannot insert multiple columns with the same name`,
+      );
+    }
     const db = {
       schema: {
         table_name,
