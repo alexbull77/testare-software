@@ -7,6 +7,7 @@ import {
 } from "mobx-state-tree";
 import { Schema } from "./Schema.model";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 export const Table = t
   .model("Root", {
@@ -45,7 +46,9 @@ export const Table = t
 
         return res;
       } catch (e) {
+        toast.error(e.response.data.message);
         console.error(e);
+        return;
       }
     }),
 

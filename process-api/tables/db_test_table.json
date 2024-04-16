@@ -1,0 +1,1 @@
+{"schema":{"table_name":"test_table","ownerId":"1f4228bd-4a53-4b80-8c92-534d93fe6bfe","columns":[{"name":"id","type":"id"},{"name":"username","type":"string"},{"name":"age","type":"number"},{"name":"birthdate","type":"datetime"}]},"data":[]}

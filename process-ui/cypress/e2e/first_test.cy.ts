@@ -3,19 +3,20 @@ describe("title", () => {
     const orgId = "1f4228bd-4a53-4b80-8c92-534d93fe6bfe";
     let accessToken = "";
 
-    cy.intercept("POST", `http://localhost:3000/auth/login`, (req) => {
-      req.continue((res) => {
-        accessToken = res.body.access_token;
-        console.log(accessToken);
-      });
-    });
+    // cy.intercept("POST", `http://localhost:3000/auth/login`, (req) => {
+    //   req.continue((res) => {
+    //     accessToken = res.body.access_token;
+    //     console.log(accessToken);
+    //   });
+    // });
 
     cy.intercept(
       "GET",
       `http://localhost:3000/dynamic-tables/get-all/${orgId}`,
       (req) => {
-        const { headers } = req;
-        headers["Authorization"] = `Bearer ${accessToken}`;
+        // const { headers } = req;
+
+        // headers["Authorization"] = `Bearer ${accessToken}`;
 
         req.continue((res) => {
           console.log(res);

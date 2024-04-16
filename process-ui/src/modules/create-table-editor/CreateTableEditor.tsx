@@ -31,15 +31,11 @@ export const CreateTableEditor = observer(() => {
 
   const navigate = useNavigate();
 
-  const initialized = useUser(root);
-
   if (role !== "organization") {
     navigate("/");
   }
 
   const onSave = () => {
-    if (!initialized) toast.error("User was not initialized");
-
     createNew(userId).then((res) => {
       if (res) {
         toast.success(`Table ${table_name} was create successfully`);
